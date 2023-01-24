@@ -14,9 +14,9 @@ const outDataPath = '/Users/miguelangelo.rodrigu/Documents/Udacity/FullStackDeve
  * @param h is the wished height for the new image.
  * @returns the new resized image file path
  */
-async function resizeImg (inImg: string, w: number, h: number): Promise<[string, boolean]> {
-  const inFilePath = inDataPath + inImg
-  const outFilePath = outDataPath + 'resized_' + inImg
+async function resizeImg(inImg: string, w: number, h: number): Promise<[string, boolean]> {
+  const inFilePath = inDataPath + inImg + '.jpg'
+  const outFilePath = outDataPath + 'resized_' + inImg + '.jpg'
   const doesImgExist: boolean = await ProcessedImgExists(outFilePath, w, h)
   let didConvert: boolean = false
 
@@ -35,7 +35,7 @@ async function resizeImg (inImg: string, w: number, h: number): Promise<[string,
  * @param h is the wished height for the resize.
  * @returns true if the resized image already exists. Otherwise returns false.
  */
-async function ProcessedImgExists (imgPath: string, w: number, h: number): Promise<boolean> {
+async function ProcessedImgExists(imgPath: string, w: number, h: number): Promise<boolean> {
   if (fs.existsSync(imgPath)) {
     const imgMetadata = await sharp(imgPath).metadata()
 
@@ -53,7 +53,7 @@ async function ProcessedImgExists (imgPath: string, w: number, h: number): Promi
  * @returns true if the input file exists, otherwise returns false
  */
 const inFileExists = (filename: string): boolean => {
-  if (fs.existsSync(inDataPath + filename)) {
+  if (fs.existsSync(inDataPath + filename + '.jpg')) {
     return true
   }
   return false

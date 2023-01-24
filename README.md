@@ -1,23 +1,24 @@
+# Image Processing API
 
-# Image Processing API  
-This project is comprised of an api with one simple endpoint to resize the images 
-that are stored in a data/in folder. The desired resized image will be written to 
-data/out with the name of 'resized_*.jpg'.
+This project is comprised of an api with one simple endpoint to resize the images
+that are stored in a data/in folder. The desired resized image will be written to
+data/out with the name of 'resized\_\*.jpg'.
 
-## Get Started 🚀  
+## Get Started 🚀
+
 To get started, simply run `node prod/index.js`. This will run the production code
 and start up the server on the port 3000.
 
-Once this is done you can visit `localhost:3000`. This will take you to the APIs 
+Once this is done you can visit `localhost:3000`. This will take you to the APIs
 main page. To get to the convert endpoint visit `localhost:3000/convert`
 
 You will have to add some parameters:
 
-- *imgName* (required): The name of the image (in the data/in folder).
-- *width and height* (optional): The width and the height of the desired image.
-- *size* (optional): the size in pixels of the image.
+- _imgName_ (required): The name of the image (in the data/in folder).
+- _width and height_ (optional): The width and the height of the desired image.
+- _size_ (optional): the size in pixels of the image.
 
-__Beware__: You cannot use width/height with size. Use either one of those.
+**Beware**: You cannot use width/height with size. Use either one of those.
 
 **< Examples >**
 
