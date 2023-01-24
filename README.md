@@ -22,6 +22,6 @@ You will have to add some parameters:
 
 **< Examples >**
 
-- `localhost:3000/convert/?imgName=sample.jpg&width=500&height=400`
-- `localhost:3000/convert/?imgName=leonard.jpg&width=700&height=400`
-- `localhost:3000/convert/?imgName=group_photo.jpg&size=500`
+- `localhost:3000/convert/?imgName=sample&width=500&height=400`
+- `localhost:3000/convert/?imgName=leonard&width=700&height=400`
+- `localhost:3000/convert/?imgName=group_photo&size=500`
