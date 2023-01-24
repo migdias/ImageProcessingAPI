@@ -8,6 +8,8 @@ const port = 3000
 app.use('/', routes)
 
 // Starting the express server
-app.listen(port, () => {})
+app.listen(port, () => {
+  console.log(`Server has started on port ${port}`)
+})
 
 export default app

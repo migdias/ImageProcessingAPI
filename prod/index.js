@@ -10,5 +10,7 @@ const port = 3000;
 // Default route for the home page
 app.use('/', index_1.default);
 // Starting the express server
-app.listen(port, () => { });
+app.listen(port, () => {
+    console.log(`Server has started on port ${port}`);
+});
 exports.default = app;
