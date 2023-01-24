@@ -4,10 +4,10 @@
     "**/*[sS]pec.?(m)js"
   ],
   "helpers": [
-    "prod/tests/helpers/**/*.?(m)js"
+    "helpers/**/*.?(m)js"
   ],
   "env": {
     "stopSpecOnExpectationFailure": false,
-    "random": true
+    "random": false
   }
 }
