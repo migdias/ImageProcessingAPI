@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/migdias/C1ImageProcessingAPI.git"
+    "url": "git+https://github.com/migdias/ImageProcessingAPI.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/migdias/C1ImageProcessingAPI/issues"
+    "url": "https://github.com/migdias/ImageProcessingAPI/issues"
   },
-  "homepage": "https://github.com/migdias/C1ImageProcessingAPI#readme",
+  "homepage": "https://github.com/migdias/ImageProcessingAPI#readme",
   "devDependencies": {
     "@types/eslint": "^8.4.10",
     "@types/express": "^4.17.15",
