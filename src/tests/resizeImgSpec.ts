@@ -1,11 +1,12 @@
 import resize from '../utilities/resizeImg'
 import sharp from 'sharp'
 import fs from 'fs'
+import path from 'path'
 
-const outDataPath = '/Users/miguelangelo.rodrigu/Documents/Udacity/FullStackDeveloper/C1/PROJECT/data/out/'
+const outDataPath = path.resolve('./data/out/')
 const sampleImage = 'sample'
 
-const outResizedImgPath = outDataPath + 'resized_' + sampleImage + '.jpg'
+const outResizedImgPath = path.resolve(outDataPath, 'resized_' + sampleImage + '.jpg')
 
 describe('Testing resizeImg Module', () => {
   // before all its going to delete a processed image if exists

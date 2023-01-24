@@ -1,11 +1,12 @@
 import sharp from 'sharp'
 import fs from 'fs'
+import path from 'path'
 
 // stop sharp cache otherwise we cant see weather the old file is the same as the wished file
 sharp.cache(false)
 
-const inDataPath = '/Users/miguelangelo.rodrigu/Documents/Udacity/FullStackDeveloper/C1/PROJECT/data/in/'
-const outDataPath = '/Users/miguelangelo.rodrigu/Documents/Udacity/FullStackDeveloper/C1/PROJECT/data/out/'
+const inDataPath = path.resolve('./data/in/')
+const outDataPath = path.resolve('./data/out/')
 
 /**
  * Takes an image stored in /data/in and it resizes it.
@@ -15,8 +16,8 @@ const outDataPath = '/Users/miguelangelo.rodrigu/Documents/Udacity/FullStackDeve
  * @returns the new resized image file path
  */
 async function resizeImg(inImg: string, w: number, h: number): Promise<[string, boolean]> {
-  const inFilePath = inDataPath + inImg + '.jpg'
-  const outFilePath = outDataPath + 'resized_' + inImg + '.jpg'
+  const inFilePath = path.resolve(inDataPath, inImg + '.jpg')
+  const outFilePath = path.resolve(outDataPath, 'resized_' + inImg + '.jpg')
   const doesImgExist: boolean = await ProcessedImgExists(outFilePath, w, h)
   let didConvert: boolean = false
 
@@ -53,7 +54,7 @@ async function ProcessedImgExists(imgPath: string, w: number, h: number): Promis
  * @returns true if the input file exists, otherwise returns false
  */
 const inFileExists = (filename: string): boolean => {
-  if (fs.existsSync(inDataPath + filename + '.jpg')) {
+  if (fs.existsSync(path.resolve(inDataPath, filename + '.jpg'))) {
     return true
   }
   return false
