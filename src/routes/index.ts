@@ -5,7 +5,7 @@ import fs from 'fs'
 // check data directories
 
 const inFolder = './data/in'
-const outFolder = './data/in'
+const outFolder = './data/out'
 
 if (!fs.existsSync(inFolder)) {
   fs.mkdirSync(inFolder)

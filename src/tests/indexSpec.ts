@@ -1,9 +1,18 @@
 import supertest from 'supertest'
 import app from '../index'
+import fs from 'fs'
+import path from 'path'
 
 const request = supertest(app)
 
+const outDataPath = path.resolve('./data/out')
+
 describe('API Routes', () => {
+  beforeAll(() => {
+    if (!fs.existsSync(outDataPath)) {
+      fs.mkdirSync(outDataPath)
+    }
+  })
   describe('GET /', () => {
     it('Checks if homepage is working', async () => {
       const response = await request.get('/')

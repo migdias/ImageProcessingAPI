@@ -9,10 +9,15 @@ const sampleImage = 'sample'
 const outResizedImgPath = path.resolve(outDataPath, 'resized_' + sampleImage + '.jpg')
 
 describe('Testing resizeImg Module', () => {
-  // before all its going to delete a processed image if exists
+  // before all its going to delete a processed image if exists.
+  // If out folder doesnt exist, create it
   beforeAll(() => {
-    if (fs.existsSync(outResizedImgPath)) {
-      fs.unlinkSync(outResizedImgPath)
+    if (fs.existsSync(outDataPath)) {
+      if (fs.existsSync(outResizedImgPath)) {
+        fs.unlinkSync(outResizedImgPath)
+      }
+    } else {
+      fs.mkdirSync(outDataPath)
     }
   })
   // remove the file afterwards
