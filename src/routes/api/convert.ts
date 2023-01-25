@@ -1,9 +1,9 @@
-import express, { RequestHandler } from 'express'
+import express, { RequestHandler, Request, Response } from 'express'
 import resize from '../../utilities/resizeImg'
 
 const convert = express.Router()
 
-convert.get('/', (async (req, res) => {
+convert.get('/', (async (req: Request, res: Response): Promise<void> => {
   /**
    * converts an image file into a resized version of it and writes it to data/out
    * @param filename is the name of the image to resize

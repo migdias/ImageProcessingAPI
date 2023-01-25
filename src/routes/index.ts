@@ -1,9 +1,9 @@
-import express from 'express'
+import express, { Request, Response } from 'express'
 import convert from './api/convert'
 
 const routes = express.Router()
 
-routes.get('/', (req, res) => {
+routes.get('/', (req: Request, res: Response): void => {
   res.send('Welcome to the Image Processing API.')
 })
 
