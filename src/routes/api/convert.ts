@@ -46,15 +46,25 @@ convert.get('/', (async (req: Request, res: Response): Promise<void> => {
       res.send('ERROR: Cannot have both width/height and size at the same time. Chose one')
       // if size doesnt exist then resize with height and width
     } else {
-      width = Number(imgParams.width)
-      height = Number(imgParams.height)
-      await convert(filename, width, height)
+      try {
+        width = Number(imgParams.width)
+        height = Number(imgParams.height)
+        await convert(filename, width, height)
+      } catch (error) {
+        res.status(400)
+        res.send('ERROR: Invalid width or height. Needs to be integer > 0')
+      }
     }
   } else {
     // if width or height is not in params
     if ('size' in imgParams) {
-      width = height = Number(imgParams.size)
-      await convert(filename, width, height)
+      try {
+        width = height = Number(imgParams.size)
+        await convert(filename, width, height)
+      } catch (error) {
+        res.status(400)
+        res.send('ERROR: Invalid size. Needs to be integer > 0')
+      }
     } else {
       res.status(400)
       res.send('ERROR: No parameters for dimensions (size or width/height)')
