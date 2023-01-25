@@ -36,6 +36,14 @@ describe('API Routes', () => {
       const response = await request.get('/convert?imgName=sample&width=500')
       expect(response.status).toBe(400)
     })
+    it('Convert with height=a should return 400', async () => {
+      const response = await request.get('/convert?imgName=sample&height=a')
+      expect(response.status).toBe(400)
+    })
+    it('Convert with width=-100 should return 400', async () => {
+      const response = await request.get('/convert?imgName=sample&width=-100')
+      expect(response.status).toBe(400)
+    })
     it('Convert with all correct parameters return 200', async () => {
       const response = await request.get('/convert?imgName=sample&width=500&height=500')
       expect(response.status).toBe(200)

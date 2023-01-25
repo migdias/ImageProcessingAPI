@@ -82,6 +82,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@rauschma/stringio@^1.4.0":
+  "integrity" "sha512-3uor2f/MXZkmX5RJf8r+OC3WvZVzpSme0yyL0rQDPEnatE02qRcqwEwnsgpgriEck0S/n4vWtUd6tTtrJwk45Q=="
+  "resolved" "https://registry.npmjs.org/@rauschma/stringio/-/stringio-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "@types/node" "^10.0.3"
+
 "@tsconfig/node10@^1.0.7":
   "integrity" "sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA=="
   "resolved" "https://registry.npmjs.org/@tsconfig/node10/-/node10-1.0.9.tgz"
@@ -178,6 +185,16 @@
   "integrity" "sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-18.11.18.tgz"
   "version" "18.11.18"
+
+"@types/node@^10.0.3":
+  "integrity" "sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-10.17.60.tgz"
+  "version" "10.17.60"
+
+"@types/node@^16.4.13":
+  "integrity" "sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-16.18.11.tgz"
+  "version" "16.18.11"
 
 "@types/qs@*":
   "integrity" "sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw=="
@@ -1824,6 +1841,14 @@
   "integrity" "sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA=="
   "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.1.0.tgz"
   "version" "5.1.0"
+
+"node-ts@^5.1.2":
+  "integrity" "sha512-ihRzS31ZbknFzXFkF4j9R3HJV1cRPTjyYzeRaEFyXv5DhWKGD+QNTJ+My5WiOc0kozEPjwRBsKh+g92hPyTNnQ=="
+  "resolved" "https://registry.npmjs.org/node-ts/-/node-ts-5.1.2.tgz"
+  "version" "5.1.2"
+  dependencies:
+    "@rauschma/stringio" "^1.4.0"
+    "@types/node" "^16.4.13"
 
 "nodemon@^2.0.20":
   "integrity" "sha512-Km2mWHKKY5GzRg6i1j5OxOHQtuvVsgskLfigG25yTtbyfRGn/GNvIbRyOf1PSCKJ2aT/58TiuUsuOU5UToVViw=="
